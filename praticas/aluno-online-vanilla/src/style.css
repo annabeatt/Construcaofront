@@ -42,7 +42,7 @@ section h3 {
     border-radius: 0.3rem;
     font-size: 1rem;
     margin-bottom: 1rem;
-    background-color:rgb(201, 194, 194);
+    background-color:rgb(201 194 194);
 }
 
 ul {
@@ -54,7 +54,7 @@ aside {
 }
 
 /* desktop */
-@media (min-width >= 768px) {
+@media (width >= 768px) {
     aside {
       display: block;
       text-align: left;
