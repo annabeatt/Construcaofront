@@ -54,7 +54,7 @@ aside {
 }
 
 /* desktop */
-@media (min-width: 768px) {
+@media (min-width >= 768px) {
     aside {
       display: block;
       text-align: left;
