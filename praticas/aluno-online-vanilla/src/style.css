@@ -9,7 +9,7 @@
     font-size: 16px;
     font-weight:100 ;
     line-height: 1.6;
-    margin: 2rem;
+    ;
 
     
 }    
@@ -17,6 +17,7 @@
 body {
     display: flex;
     height: 100vh;
+    gap: 1rem; /*espaço entre sidebar e conteudo*/
 
 }
 
@@ -30,9 +31,14 @@ main {
     display: flex;
     flex: 1;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
 
 }
-
+main > header {
+        display: flex ;
+        justify-content: space-between;
+}
 section {
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -51,7 +57,22 @@ ul {
 
 aside {
     display: none;
+    background-color: rgb(201 194 194);
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
+
+aside header {
+    display: flex;
+    align-items: center; /* alinha verticalmente */
+    gap: 0.5rem; /* espaço entre o ícone e o texto */
+}
+
+aside header img {
+    width: 3rem;
+}
+
+
 
 /* desktop */
 @media (width >= 768px) {
@@ -61,4 +82,64 @@ aside {
     }
 
 
+/* ===== LOGIN ===== */
+.login {
+    justify-content: center;
+    align-items: center;
+}
+
+.login main {
+    max-width: 400px;
+    width: 100%;
+    background-color: rgb(76 6 204);
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 10px rgba(27 209 11 0.1);
+}
+
+/* Formulário */
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Agrupamento dos campos */
+.login fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs */
+.login input {
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    border: 1px solid #ccc;
+}
+
+/* Estado de erro */
+.login input.error {
+    border-color: red;
+}
+
+/* Mensagem de erro */
+.login .error-message {
+    font-size: 0.8rem;
+    color: red;
+    height: 1rem;
+}
+
+/* Botão */
+.login button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: darkblue;
+}
 }
