@@ -1,43 +1,33 @@
-import './style.css'
+import "./style.css";
 
-const form = document.getElementById("loginForm");
-const matricula = document.getElementById("matricula");
-const password = document.getElementById("senha");
+const botao = document.querySelector("button");
 
+botao.addEventListener("click", (e) => {
+  const matriculaInput = document.querySelector("#matricula");
+  const matriculaErro = document.querySelector("#matriculaErro");
+  const senhaInput = document.querySelector("#senha");
+  const senhaErro = document.querySelector("#senhaErro");
 
-function showError(input, message) {
-  const fieldset = input.parentElement;
-  const errorSpan = fieldset.querySelector(".error-message");
+  matriculaErro.textContent = '';
+  senhaErro.textContent = '';
 
-  errorSpan.textContent = message;
-  input.classList.add("error");
-}
-
-function clearError(input) {
-  const fieldset = input.parentElement;
-  const errorSpan = fieldset.querySelector(".error-message");
-
-  errorSpan.textContent = "";
-  input.classList.remove("error");
-}
-
-function validate(input) {
-  if (input.value.trim() === "") {
-    showError(input, "Campo obrigatório");
-    return false;
+  if (matriculaInput.value == "") {
+    matriculaErro.textContent = "Matrícula é obrigatória";
+    return;
   }
 
-  clearError(input);
-  return true;
-}
+  if (parseInt(matriculaInput.value) <= 0) {
+    matriculaErro.textContent = "Matrícula deve ser um número positivo";
+    return;
+  }
 
-form.addEventListener("submit", function(event) {
-  event.preventDefault(); // impede recarregar página
+  if (senhaInput.value == "") {
+    senhaErro.textContent = "Senha é obrigatória";
+    return;
+  }
 
-  const matriculaValid = validate(matricula);
-  const passwordValid = validate(password);
-
-  if (matriculaValid && passwordValid) {
-    window.location.href = "dashboard.html";
+  if (senhaInput.value.length < 8) {
+    senhaErro.textContent = "A Senha deve conter pelo menos 8 caracteres";
+    return;
   }
 });
