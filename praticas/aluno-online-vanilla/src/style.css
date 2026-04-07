@@ -74,15 +74,6 @@ aside header img {
 }
 
 
-
-/* desktop */
-@media (width >= 768px) {
-    aside {
-      display: block;
-      text-align: left;
-    }
-}
-
 /* ================= LOGIN ================= */
 
 .pagina-login {
@@ -115,7 +106,10 @@ aside header img {
 
 .pagina-login form {
     display: flex;
+    flex: 1;
     flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .pagina-login label {
@@ -140,14 +134,19 @@ aside header img {
 
 /* 💻 DESKTOP */
 @media (min-width: 768px) {
+    aside {
+        display: block;
+    }
+    
     .pagina-login main > button {
         margin: 0 3rem;
     }
 
     .pagina-login main {
-        border: 1px solid var(--cor-primária);
-        border-radius: 2rem;
+        border: 1px solid rgb(112, 13, 13);
+        border-radius: 1rem;
         margin: 3.5rem auto;
         max-width: 400px;
+        padding: 1rem;
     }
 }

@@ -3,6 +3,7 @@ import "./style.css";
 const botao = document.querySelector("button");
 
 botao.addEventListener("click", (e) => {
+  e.preventDefault ();
   const matriculaInput = document.querySelector("#matricula");
   const matriculaErro = document.querySelector("#matriculaErro");
   const senhaInput = document.querySelector("#senha");

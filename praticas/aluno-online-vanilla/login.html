@@ -2,29 +2,30 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aluno Online</title>
   
 </head>
 <body class="pagina-login">
 
   <main>
-    <h1>Login </h1>
+    <img src="learn.svg" alt="Icone chapeu">
+    <h1>Aluno Online</h1>
 
     <form id="loginForm" novalidate>
 
       <!-- Grupo do email -->
-        <p></p>
         <label for="matricula">Matricula</label>
         <input type="number" id="matricula" name="matricula">
-        <span class="matriculaErro"></span>
+        <span id="matriculaErro"></span>
  
 
       <!-- Grupo da senha -->
         <p></p>
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha">
-        <span class="senhaErro"></span>
-  
+        <span id="senhaErro"></span>
+        <p></p>
 
       <button type="submit">Entrar</button>
 
