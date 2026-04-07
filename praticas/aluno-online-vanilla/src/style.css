@@ -18,7 +18,7 @@
 body {
     display: flex;
     height: 100vh;
-    gap: 1rem; /*espaço entre sidebar e conteudo*/
+    gap: 1rem; /* espaço entre sidebar e conteudo */
 
 }
 
@@ -36,10 +36,12 @@ main {
     padding: 2rem;
 
 }
+
 main > header {
         display: flex ;
         justify-content: space-between;
 }
+
 section {
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -133,7 +135,7 @@ aside header img {
 
 
 /* 💻 DESKTOP */
-@media (min-width: 768px) {
+@media (width >= 768px) {
     aside {
         display: block;
     }
@@ -143,7 +145,7 @@ aside header img {
     }
 
     .pagina-login main {
-        border: 1px solid rgb(112, 13, 13);
+        border: 1px solid rgb(112 13 13);
         border-radius: 1rem;
         margin: 3.5rem auto;
         max-width: 400px;
