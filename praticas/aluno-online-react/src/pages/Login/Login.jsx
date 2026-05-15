@@ -3,6 +3,8 @@ import InputEmail from "../../components/Input/InputEmail";
 import InputSenha from "../../components/Input/InputSenha";
 import logo from "../../assets/learn.svg";
 import "./Login.css";
+import { useAuthContext } from "../../contexts/AuthContext";
+import { useNavigate } from "react-router";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -10,6 +12,10 @@ function Login() {
 
   const [erroEmail, setErroEmail] = useState("");
   const [erroSenha, setErroSenha] = useState("");
+
+  const { login } = useAuthContext();
+
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -37,7 +43,8 @@ function Login() {
     }
 
     if (valido) {
-      alert("Login realizado com sucesso!");
+      login({ email, senha });
+      navigate("/");
     }
   }
 
@@ -45,7 +52,6 @@ function Login() {
     <>
       <main className="login-container">
         <form onSubmit={handleSubmit}>
-          
           <img src={logo} alt="Logo" className="logo" />
 
           <h2>Aluno Online</h2>
@@ -66,9 +72,7 @@ function Login() {
         </form>
       </main>
 
-      <p className="footer">
-        © 2026. Todos os direitos reservados.
-      </p>
+      <p className="footer">© 2026. Todos os direitos reservados.</p>
     </>
   );
 }

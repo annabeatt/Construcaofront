@@ -5,6 +5,7 @@ import Faltas from './pages/Faltas/Faltas'
 import Notas from './pages/Notas/Notas'
 import Boletos from './pages/Boletos/Boletos'
 import Requerimentos from './pages/Requerimentos/Requerimentos'
+import Login from './pages/Login/Login'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="boletos" element={<Boletos />} />
         <Route path="requerimentos" element={<Requerimentos />} />
       </Route>
+      <Route path="/login" element={<Login />} />
     </Routes>
   )
 }
