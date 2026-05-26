@@ -1,11 +1,13 @@
 import "./Dashboard.css";
 import Card from "../../components/Card/Card";
+import { useAuthContext } from "../../contexts/AuthContext";
 
 function Dashboard() {
+  const { usuario } = useAuthContext();
   return (
     <div className="dashboard-container">
       <div className="dashboard-header">
-        <h1>Olá, Aluno 👋</h1>
+        <h1>Olá, {usuario.nome} 👋</h1>
         <p>Bem-vindo ao seu portal acadêmico</p>
       </div>
 

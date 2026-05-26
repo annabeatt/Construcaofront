@@ -1,7 +1,9 @@
 import { NavLink } from 'react-router'
 import './Sidebar.css'
+import { useAuthContext } from '../../hooks/useAuthContexts'
 
 function Sidebar() {
+  const {logout}= useAuthContext();
   return (
     <aside className="sidebar">
       <h2>Aluno Online</h2>
@@ -25,6 +27,9 @@ function Sidebar() {
 
         <NavLink to="/requerimentos">
           Requerimentos
+        </NavLink>
+          <NavLink to="/login" onClick={logout}>
+          Sair
         </NavLink>
       </nav>
     </aside>
