@@ -8,7 +8,6 @@ import Login from "./pages/Login";
 import Perfil from "./pages/Perfil";
 
 function App() {
-
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
