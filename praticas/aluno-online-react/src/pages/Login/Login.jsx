@@ -3,7 +3,7 @@ import InputEmail from "../../components/Input/InputEmail";
 import InputSenha from "../../components/Input/InputSenha";
 import logo from "../../assets/learn.svg";
 import "./Login.css";
-import { useAuthContext } from "../../hooks/useAuthContexts";
+import { useAuthContext } from "../../hooks/useAuthContext";
 import { useNavigate } from "react-router";
 
 function Login() {

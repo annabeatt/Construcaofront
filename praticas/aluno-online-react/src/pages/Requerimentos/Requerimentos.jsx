@@ -1,5 +1,6 @@
 import "./Requerimentos.css";
 import Tabela from "../../components/Tabela/Tabela";
+import { Link } from "react-router";
 
 function Requerimentos() {
   const colunas = ["Tipo", "Data", "Status"];
@@ -29,6 +30,13 @@ function Requerimentos() {
           <h3>Total</h3>
           <span>2</span>
         </div>
+      </div>
+
+      <div className="d-flex justify-content-between align-items-center mb-3">
+
+        <Link to="/requerimentos/novo" className="btn btn-success">
+          ➕ Novo Requerimento
+        </Link>
       </div>
 
       <div className="table-container">
