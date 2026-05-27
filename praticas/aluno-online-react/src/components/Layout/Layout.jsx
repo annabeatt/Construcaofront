@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from "react-router";
 import Sidebar from "../Sidebar/Sidebar";
 import "./Layout.css";
-import { useAuthContext } from "../../contexts/AuthContext";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 function Layout() {
   const { logado } = useAuthContext();

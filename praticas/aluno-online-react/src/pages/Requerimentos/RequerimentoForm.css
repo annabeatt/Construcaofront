@@ -1,0 +1,57 @@
+
+/* título */
+.container h2 {
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+
+/* cada bloco do formulário */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+/* labels */
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* select */
+.form-group select {
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* textarea */
+.form-group textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+/* botão */
+.container button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* mensagem de erro */
+.text-danger {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}

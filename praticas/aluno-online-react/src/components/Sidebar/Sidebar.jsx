@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router'
 import './Sidebar.css'
-import { useAuthContext } from '../../hooks/useAuthContexts'
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 function Sidebar() {
   const {logout}= useAuthContext();
