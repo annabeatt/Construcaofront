@@ -1,0 +1,38 @@
+{
+  "produtos": [
+    {
+      "nome": "laranja",
+      "preco": 9.99,
+      "unidade": "kg",
+      "id": "g5kMPPJJYDQ"
+    },
+    {
+      "nome": "banana",
+      "preco": 12.5,
+      "unidade": "kg",
+      "id": "xuWsGW2O61E"
+    },
+    {
+      "nome": "Laranja",
+      "preco": "8.99",
+      "unidade": "1kg",
+      "id": "As7zVg3Bwh4"
+    },
+    {
+      "nome": "Laranja",
+      "preco": "8.99",
+      "unidade": "1kg",
+      "id": "YsfQfVZHCN8"
+    },
+    {
+      "nome": "melancia",
+      "preco": "5.99",
+      "unidade": "1kg",
+      "id": "P7e0SnYk8Gw"
+    }
+  ],
+  "clientes": [],
+  "fornecedores": [],
+  "pedidos": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
