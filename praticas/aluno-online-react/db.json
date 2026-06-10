@@ -1,0 +1,26 @@
+{
+  "requerimentos": [
+    {
+      "tipo": "declaracao",
+      "descricao": "gvvjbhjbhgbh",
+      "data": "09/06/2026",
+      "status": "Em análise",
+      "id": "gKyLMxBWhOw"
+    },
+    {
+      "tipo": "segunda-via",
+      "descricao": "ugbvbvhbjkn\n",
+      "data": "09/06/2026",
+      "status": "Em análise",
+      "id": "rxu3Fy3gwig"
+    },
+    {
+      "tipo": "declaracao",
+      "descricao": "efresyhtjfjf",
+      "data": "09/06/2026",
+      "status": "Em análise",
+      "id": "V_7or5UfDMQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,6 +1,7 @@
 import "./Tabela.css";
 
 function Tabela({ titulos = [], dados = [] }) {
+  console.log (titulos, dados);
   return (
     <table className="tabela">
       <thead>
