@@ -23,5 +23,12 @@
   "clientes": [],
   "fornecedores": [],
   "pedidos": [],
+  "usuarios": [
+    {
+      "email": "ana@iesb.br",
+      "senha": "123456",
+      "id": "abcd1234"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
