@@ -18,6 +18,12 @@
       "nome": "Pera",
       "preco": "2.00",
       "unidade": "Uni"
+    },
+    {
+      "nome": "<script>alert(\"perdeu\")</script>",
+      "preco": "1.00",
+      "unidade": "",
+      "id": "HXSW1VCv5TE"
     }
   ],
   "clientes": [],
