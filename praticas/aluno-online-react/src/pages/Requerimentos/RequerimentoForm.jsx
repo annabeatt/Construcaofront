@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
 import "./RequerimentoForm.css" ; 
+import { cadastrarRequerimento } from "./RequerimenroService";
 
 function RequerimentoForm() {
   const {
@@ -8,14 +10,24 @@ function RequerimentoForm() {
     reset,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate()
 
-  function onSubmit(data) {
-    console.log("Requerimento enviado:", data);
+ async function onSubmit(data) {
+  try {
+    const novoRequerimento = {
+      ...data,
+      data: new Date().toLocaleDateString("pt-BR"),
+      status: "Em análise",
+    };
 
-    // limpa o formulário
+    await cadastrarRequerimento(novoRequerimento);
     reset();
+    navigate( "/requerimentos")
+  } catch (error) {
+    console.error(error);
+    alert("Erro ao enviar requerimento.");
   }
-
+}
   return (
     <div className="container mt-4">
       <h2>Novo Requerimento</h2>
