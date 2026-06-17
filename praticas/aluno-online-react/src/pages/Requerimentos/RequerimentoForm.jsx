@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import "./RequerimentoForm.css" ; 
+import { cadastrarRequerimento } from "../../services/RequerimentosService"
 
 function RequerimentoForm() {
   const {
@@ -9,12 +10,17 @@ function RequerimentoForm() {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(data) {
-    console.log("Requerimento enviado:", data);
+async function onSubmit(data) {
+  try {
+    await cadastrarRequerimento(data);
 
-    // limpa o formulário
+    alert("Requerimento enviado!");
+
     reset();
+  } catch (error) {
+    console.error(error);
   }
+}
 
   return (
     <div className="container mt-4">

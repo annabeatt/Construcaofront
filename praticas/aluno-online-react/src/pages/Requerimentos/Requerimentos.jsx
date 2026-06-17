@@ -2,6 +2,7 @@ import "./Requerimentos.css";
 import Tabela from "../../components/Tabela/Tabela";
 import { Link } from "react-router";
 
+
 function Requerimentos() {
   const colunas = ["Tipo", "Data", "Status"];
 

@@ -6,6 +6,7 @@ import "./Login.css";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useNavigate } from "react-router";
 
+
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -17,36 +18,46 @@ function Login() {
 
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
-    event.preventDefault();
+async function handleSubmit(event) {
+  event.preventDefault();
 
-    let valido = true;
+  let valido = true;
 
-    if (!email) {
-      setErroEmail("Email é obrigatório");
-      valido = false;
-    } else if (!email.includes("@")) {
-      setErroEmail("Email inválido");
-      valido = false;
-    } else {
-      setErroEmail("");
-    }
-
-    if (!senha) {
-      setErroSenha("Senha é obrigatória");
-      valido = false;
-    } else if (senha.length < 6) {
-      setErroSenha("Mínimo de 6 caracteres");
-      valido = false;
-    } else {
-      setErroSenha("");
-    }
-
-    if (valido) {
-      login({ email, senha });
-      navigate("/");
-    }
+  if (!email) {
+    setErroEmail("Email é obrigatório");
+    valido = false;
+  } else if (!email.includes("@")) {
+    setErroEmail("Email inválido");
+    valido = false;
+  } else {
+    setErroEmail("");
   }
+
+  if (!senha) {
+    setErroSenha("Senha é obrigatória");
+    valido = false;
+  } else if (senha.length < 6) {
+    setErroSenha("Mínimo de 6 caracteres");
+    valido = false;
+  } else {
+    setErroSenha("");
+  }
+
+  if (!valido) return;
+
+  try {
+
+
+    await login(
+      email,
+      senha
+    );
+
+    navigate("/");
+  } catch (error) {
+    alert(error.message);
+  }
+}
 
   return (
     <>
